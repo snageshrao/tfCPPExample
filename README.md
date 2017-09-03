@@ -14,9 +14,11 @@ Download and place the folder TFprocEx in C drive.
 Download and place the folder TFprocEx in C drive.
 
 Open cmd prompt,  cd c:\TFprocEx
-run cppCreatProcEx.exe. This will show the time taken for 'loadcppEx' process creation/execution (~0.015seconds) and time taken until process in terminated/return the output (~0.8 seconds).
+run cppCreatProcEx.exe. This will show the time taken for 'loadcppEx' process creation and execution (~0.015seconds) and also time taken for process termination and returning the output (~0.8 seconds).
 
 Within cppCreatProcEx.cpp (line 30) change the process name to dummyEx.ex which takes much lesser time (<0.1 seconds) to create, execute, and also to get the return value. 
+
+I am using VS developer command prompt to compile cppCreatProcEx.cpp and dummyEx.cpp: cl /EHsc cppCreatProcEx.cpp
 
 ## To build loadcppEx.cpp
 place loadcppEx folder in tensorflow/examples folder of tensorflow repository. Go to cmd prompt and run bazel build loadcppEx.
